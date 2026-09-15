@@ -12,7 +12,7 @@ cask "livewallpaper" do
 
   app "LiveWallpaper.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args:         ["-d", "com.apple.quarantine", "/Applications/LiveWallpaper.app"],
                    sudo:         false,
